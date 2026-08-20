@@ -1,455 +1,367 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Роман Путилов - CV</title>
-  <style>
-    /* ---- Core theme (no external deps) ---- */
-    :root{
-      --bg:#ffffff;
-      --fg:#111827;          /* gray-900 */
-      --muted:#6b7280;       /* gray-500 */
-      --muted2:#374151;      /* gray-700 */
-      --card:#ffffff;
-      --border:#e5e7eb;      /* gray-200 */
-      --ring:#cbd5e1;        /* slate-300 */
-      --accent:#2563eb;      /* blue-600 */
-      --warn:#b45309;        /* amber-700 */
-      --warnbg:#fff7ed;      /* amber-50 */
-      --callout:#1e40af;     /* blue-800 */
-      --calloutbg:#eff6ff;   /* blue-50 */
-    }
-    html,body{background:var(--bg);color:var(--fg);margin:0;padding:0;-webkit-text-size-adjust:100%;text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";}
-    *{box-sizing:border-box}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1152px;margin:0 auto;padding:16px}
-    .muted{color:var(--muted)}
-    .muted2{color:var(--muted2)}
-    h1{font-weight:900;letter-spacing:-.02em;font-size:clamp(32px,4vw,56px);margin:0 0 8px}
-    h2{font-weight:800;letter-spacing:-.01em;font-size:clamp(22px,3vw,36px);margin:0 0 24px}
-    .subtitle{font-size:clamp(16px,2.2vw,20px);color:#374151}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border);border-radius:16px;background:#f8fafc}
-    .grid{display:grid;gap:12px}
-    @media (min-width:768px){
-      .grid-5{grid-template-columns:repeat(5,minmax(0,1fr))}
-      .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-      .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .header-pad{padding-top:64px}
-    }
-    @media (max-width:767.98px){
-      .grid-5,.grid-3,.grid-2{grid-template-columns:1fr}
-      .header-pad{padding-top:40px}
-    }
-    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.04);padding:20px}
-    .pill{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:#f8fafc;font-size:12px;margin:0 8px 8px 0;white-space:nowrap}
-    .callout{
-  border-left:6px solid var(--accent);
-  background:#eaf2ff;
-  border:1px solid #9ab5f8;
-  border-radius:14px;
-  padding:18px 20px;
-  color:var(--fg);
-}
-    .callout-warn{
-  border-left:6px solid var(--warn);
-  background:#fff3e6;
-  border:1px solid #f2b26b;
-  border-radius:14px;
-  padding:18px 20px;
-  color:var(--fg);
-}
-    .caps{letter-spacing:.12em;text-transform:uppercase;font-weight:700;font-size:12px;color:var(--muted)}
-    .lead-sm{font-size:14px;line-height:1.5}
-    ul{margin:0;padding-left:20px}
-    li{margin-bottom:8px}
-    .footer{padding:32px 0}
-    .nowrap{white-space:nowrap}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1eee7">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Роман Путилов — Product & AI Transformation Executive. Стратегия облачного и AI-портфеля, P&L, GTM, клиентский опыт и управление сложными технологическими программами.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://putilovr.github.io/CV/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/geologica-cyrillic-full-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/geologica-latin-full-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="print.css" media="print">
+  <title>Роман Путилов — Product & AI Transformation Executive</title>
 
-    /* ---------- Разделы и большие номера ---------- */
-    .section{
-      position:relative; border-bottom:1px solid var(--border);
-      padding:56px 0;
-      --secnum-size:clamp(56px,11vw,112px);
-    }
-    .secnum{
-      position:absolute; left:16px; top:6px; line-height:1;
-      font-weight:900; font-size:var(--secnum-size);
-      color:rgba(0,0,0,.06); user-select:none; z-index:0;
-    }
-    .section-content{position:relative; z-index:1}
-    @media (min-width:1024px){
-      .section{padding-left:calc(var(--secnum-size) + 32px)}
-      .secnum{display:block}
-    }
-    @media (max-width:1023.98px){
-      .secnum{display:none}
-      .section{padding-left:0}
-    }
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Роман Путилов — Product & AI Transformation Executive">
+  <meta property="og:description" content="Продукт, AI, облачные технологии и трансформация бизнеса — с инженерным фундаментом и измеримыми результатами.">
+  <meta property="og:url" content="https://putilovr.github.io/CV/">
+  <meta property="og:image" content="https://putilovr.github.io/CV/assets/roman-putilov.jpg">
+  <meta property="og:image:alt" content="Портрет Романа Путилова">
+  <meta property="og:locale" content="ru_RU">
 
-    /* ---------- Оформление опыта (две колонки) ---------- */
-    .jobs{display:grid;gap:18px}
-    .job{display:grid;gap:8px}
-    @media (min-width:900px){
-      .job{grid-template-columns:220px 1fr;align-items:start}
-    }
-    .job .date{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:2px}
-    .job h3{margin:0;font-weight:700;font-size:18px}
-    .job .company{margin:0 0 10px;color:var(--muted)}
-
-    /* Print */
-    @page{size:A4;margin:10mm}
-    @media print{
-      .section{break-inside:avoid}
-      html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-    }
-
-/* --- Strong overrides for print readability of callouts --- */
-.callout *, .callout-warn * { color: var(--fg) !important; }
-.callout a, .callout-warn a { text-decoration: underline; }
-</style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Роман Путилов",
+    "url": "https://putilovr.github.io/CV/",
+    "image": "https://putilovr.github.io/CV/assets/roman-putilov.jpg",
+    "jobTitle": "Product Marketing & GTM Lead",
+    "description": "Product & AI Transformation Executive с инженерным фундаментом и опытом управления облачными продуктами, P&L, GTM и сложными технологическими программами.",
+    "email": "rpoo@bk.ru",
+    "telephone": "+7 916 672-36-02",
+    "worksFor": {"@type": "Organization", "name": "Cloud.ru"},
+    "sameAs": ["https://t.me/PutilovR"]
+  }
+  </script>
 </head>
-<body>
-  <main>
-    <header class="header-pad">
-      <div class="container">
-        <div style="display: flex; align-items: stretch; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
-          <div style="flex: 1 1 300px; min-width: 280px; display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <h1>Роман Путилов</h1>
-              <div class="subtitle">Chief Product Officer (Cloud · AI)</div>
-              <div style="margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px;">
-                <a href="tel:+79166723602" class="button icon-button">📞 +7 916 672-36-02</a>
-                <a href="mailto:rpoo@bk.ru" class="button icon-button">✉️ rpoo@bk.ru</a>
-                <a href="https://t.me/PutilovR" class="button icon-button">🛫 @PutilovR</a>
-              </div>
+
+<body id="top">
+  <a class="skip-link" href="#main-content">К содержанию</a>
+
+  <header class="site-header">
+    <nav class="shell topbar" aria-label="Основная навигация">
+      <div class="topbar-links">
+        <a href="#experience">Опыт</a>
+        <a href="mailto:rpoo@bk.ru">Email</a>
+        <a href="https://t.me/PutilovR" rel="me">Telegram</a>
+      </div>
+      <a class="download-link" href="Roman-Putilov-CV.pdf" download type="application/pdf">Скачать CV <span aria-hidden="true">↓</span></a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero shell" aria-labelledby="person-name">
+      <div class="hero-layout">
+        <h1 id="person-name" class="hero-name"><span>Роман</span><br><span class="last-name"> Путилов</span></h1>
+        <p class="hero-role" lang="en">Product &amp; AI <br>Transformation Executive</p>
+        <figure class="portrait">
+          <img src="assets/roman-putilov.jpg" alt="Портрет Романа Путилова" width="640" height="640" fetchpriority="high">
+        </figure>
+        <div class="print-contact" aria-label="Контакты">
+          <p>Product Marketing &amp; GTM Lead · Cloud.ru</p>
+          <p><a href="tel:+79166723602">+7 916 672-36-02</a><span aria-hidden="true"> · </span><a href="mailto:rpoo@bk.ru">rpoo@bk.ru</a><span aria-hidden="true"> · </span><a href="https://t.me/PutilovR">t.me/PutilovR</a><span aria-hidden="true"> · </span><a href="https://putilovr.github.io/CV/">putilovr.github.io/CV</a></p>
+        </div>
+        <p class="hero-summary">Руководитель с инженерным фундаментом и более чем 10-летним опытом в корпоративных ИТ. Соединяю продукт, технологии, продажи и реализацию — от стратегии и P&amp;L до клиентского опыта и работающей системы управления.</p>
+      </div>
+
+      <nav class="proof-index" aria-label="Ключевые области экспертизы">
+        <a href="#portfolio-strategy"><span class="index-no">01</span><span lang="en">Cloud &amp; AI Portfolio</span><span aria-hidden="true">↓</span></a>
+        <a href="#pnl-ownership"><span class="index-no">02</span><span lang="en">P&amp;L Ownership</span><span aria-hidden="true">↓</span></a>
+        <a href="#cross-functional-leadership"><span class="index-no">03</span><span lang="en">Cross-functional Leadership</span><span aria-hidden="true">↓</span></a>
+        <a href="#customer-experience"><span class="index-no">04</span><span lang="en">CX</span><span aria-hidden="true">↓</span></a>
+        <a href="#go-to-market"><span class="index-no">05</span><span lang="en">GTM</span><span aria-hidden="true">↓</span></a>
+        <a href="#customer-journey"><span class="index-no">06</span><span lang="en">CJM</span><span aria-hidden="true">↓</span></a>
+      </nav>
+
+      <nav class="metric-index" aria-label="Ключевые результаты">
+        <a href="#impact-arr"><strong>×20</strong><span>рост ARR<br>за три года</span></a>
+        <a href="#impact-ttm"><strong>×6</strong><span>ускорение<br>вывода изменений</span></a>
+        <a href="#impact-nps"><strong>+48 п.п.</strong><span>рост NPS<br>направления</span></a>
+        <a href="#impact-team"><strong>56 FTE</strong><span>8 прямых<br>подчинённых</span></a>
+        <a href="#impact-sla"><strong>99,985%</strong><span>доступность<br>сервисов</span></a>
+      </nav>
+    </section>
+
+    <section id="ai-adoption" class="section shell">
+      <header class="section-intro">
+        <p class="section-kicker">01 / AI Adoption</p>
+        <div>
+          <h2>Использую AI как портфель инструментов и новую операционную модель</h2>
+          <p>Глубоко понимаю и технологическую, и бизнес-сторону AI. Этого достаточно, чтобы находить жизнеспособные сценарии применения, задавать правильные вопросы инженерным командам и принимать взвешенные управленческие решения.</p>
+        </div>
+      </header>
+
+      <div class="proof-rows">
+        <article class="proof-row" id="ai-product-approach">
+          <p class="row-no">01</p>
+          <h3>Продуктовый подход к AI</h3>
+          <p>Начинаю с проверяемой бизнес-гипотезы: заранее оцениваю экономику и влияние на P&amp;L, определяю критерии успеха и принимаю решение о масштабировании только после подтверждения ценности.</p>
+        </article>
+        <article class="proof-row" id="portfolio-strategy">
+          <p class="row-no">02</p>
+          <h3>Облачный и AI-портфель</h3>
+          <p>Формировал продуктовую стратегию портфеля IaaS, PaaS и AI-сервисов с ответственностью за баланс роста, маржи и P&amp;L. Сейчас моя команда формирует стратегию выхода на рынок и продвижения инфраструктурных продуктов и продуктов информационной безопасности Cloud.ru.</p>
+        </article>
+        <article class="proof-row" id="explain-ai">
+          <p class="row-no">03</p>
+          <h3>Объясняю AI руководителям</h3>
+          <p>Автор программы СберУниверситета по облачным технологиям и AI для нетехнических руководителей компаний и лидеров цифровой трансформации. Автор лекции «Юнит-экономика AI-инициатив», практического семинара по AI-агентам и отдельного семинара по саморазворачивающимся агентам.</p>
+        </article>
+        <article class="proof-row" id="central-university">
+          <p class="row-no">04</p>
+          <h3>Научный руководитель в Центральном университете</h3>
+          <p>Сопровождаю магистерские дипломные проекты по продуктовому управлению и машинному обучению, в том числе AI-проекты. Помогаю связать продуктовую постановку задачи, технологическую реализуемость и ценность для пользователя и бизнеса.</p>
+        </article>
+        <article class="proof-row" id="end-to-end-transformation">
+          <p class="row-no">05</p>
+          <h3>Сквозная трансформация</h3>
+          <p>Работаю не с отдельной технологией, а со всей системой её применения: бизнес-задачей, процессами и данными, проектированием решения, проверкой гипотезы, выводом на рынок, внедрением, поддержкой и измерением эффекта.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="impact" class="section section-ink">
+      <div class="shell">
+        <header class="section-intro">
+          <p class="section-kicker">02 / Selected Impact</p>
+          <div>
+            <h2>Цифры, подтверждающие масштаб</h2>
+            <p>Каждая цифра связана с конкретной системой управления, проектом или коммерческим результатом — без смешения разных кейсов.</p>
+          </div>
+        </header>
+
+        <div class="scale-ledger">
+          <article class="scale-item" id="impact-import-scale">
+            <p class="scale-number">103 специалиста<br>16 000 серверов</p>
+            <p>Четыре компании в одной критической программе импортозамещения платформы виртуализации.</p>
+          </article>
+          <article class="scale-item" id="impact-contract-value">
+            <p class="scale-number">Более 1 млрд рублей</p>
+            <p>Совокупная стоимость первых трёх контрактов на продукт «Частное облако», созданный из заказного внедрения.</p>
+          </article>
+        </div>
+
+        <div class="case-files">
+          <article class="case-file" id="case-growth">
+            <aside><span>Кейс 01</span><span>2020–2023</span></aside>
+            <div class="case-body">
+              <h3>Продуктовое направление: рост, клиентская ценность и надёжность</h3>
+              <p id="pnl-ownership">За три года выстроил систему управления направлением IaaS/PaaS: связал стратегию портфеля и P&amp;L с целями продуктовых команд, сегментировал рынок и выстроил позиционирование вокруг задач клиента. Организовал постоянную работу с обратной связью и объединил разработку, SRE, первую и вторую линии поддержки едиными процессами управления инцидентами, проблемами и мощностями.</p>
+              <p>Рост бизнеса, клиентский опыт, скорость изменений и устойчивость сервисов стали частью одной управленческой системы.</p>
+              <dl class="evidence-list">
+                <div id="impact-arr"><dt>Рост</dt><dd>Годовая регулярная выручка (ARR) продуктового направления выросла в 20 раз за три года.</dd></div>
+                <div id="impact-nps"><dt>Клиенты</dt><dd>NPS направления вырос на 48 процентных пунктов; более 300 корпоративных клиентов.</dd></div>
+                <div id="impact-sla"><dt>Надёжность</dt><dd>Доступность сервисов достигла 99,985%.</dd></div>
+                <div id="impact-ttm"><dt>Скорость</dt><dd>Вывод изменений на рынок ускорился в 6 раз.</dd></div>
+                <div id="impact-team"><dt>Команда</dt><dd>Продуктовая организация — 56 FTE, восемь прямых подчинённых.</dd></div>
+              </dl>
             </div>
-          </div>
+          </article>
 
-          <div style="flex-shrink: 0; display: flex; align-items: center;">
-            <img src="PutilovR.jpg" alt="Роман Путилов"
-              style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 2px solid #e5e7eb;" />
-          </div>
-        </div>
-      </div>
-    </header>
+          <article class="case-file" id="case-import-substitution">
+            <aside><span>Кейс 02</span><span>2023–2024</span></aside>
+            <div class="case-body">
+              <h3>Импортозамещение платформы виртуализации</h3>
+              <p id="cross-functional-leadership">Руководил программой в контуре 16 000 серверов и координировал 103 специалиста из четырёх компаний: заказчика, двух вендоров и генерального подрядчика. Выстроил общий ритм управления, сквозные регламенты и матрицы эскалаций.</p>
+              <p>Объединил приёмку релизов, пусконаладочные работы, приёмочные испытания, миграцию, эксплуатацию и поддержку; автоматизировал маршрутизацию обращений и связал технический план с договорной, юридической и финансовой работой.</p>
+              <p class="result-line"><span>Результат</span> Договорные требования выполнены с минимально возможными отклонениями от графика и нарушениями SLA.</p>
+            </div>
+          </article>
 
-    <div class="grid grid-5" style="margin-top: 24px">
-      <div class="card">
-        <div style="font-size: clamp(24px, 3.2vw, 34px); font-weight: 800">в 20 раз</div>
-        <div class="lead-sm muted">Рост рекуррентной выручки продуктового направления за три года</div>
-      </div>
-      <div class="card">
-        <div style="font-size: clamp(24px, 3.2vw, 34px); font-weight: 800">99.985%</div>
-        <div class="lead-sm muted">Доступность сервисов (SLA) для 300+ enterprise-клиентов</div>
-      </div>
-      <div class="card">
-        <div style="font-size: clamp(24px, 3.2vw, 34px); font-weight: 800">в 6 раз</div>
-        <div class="lead-sm muted">Снижение Time-to-Market за счёт цифровой трансформации</div>
-      </div>
-      <div class="card">
-        <div style="font-size: clamp(24px, 3.2vw, 34px); font-weight: 800">+48 п.п.</div>
-        <div class="lead-sm muted">NPS за три года - лучшее значение среди облачных провайдеров в РФ</div>
-      </div>
-      <div class="card">
-        <div style="font-size: clamp(24px, 3.2vw, 34px); font-weight: 800">94%</div>
-        <div class="lead-sm muted">eNPS продуктового направления (56 FTE; 8 direct reports) – рост на 30% за 3 года</div>
-      </div>
-    </div>
-        <div class="callout" style="margin-top:18px">
-          <div class="lead-sm" style="color:#e4e4e7">Лидер продуктового направления крупнейшего облачного провайдера в РФ; опыт запуска IaaS/PaaS-продуктов для B2B, масштабирования продуктового направления, владения P&amp;L, системного управления клиентским опытом, формирования продуктовых команд, построения кросс-командных процессов, привлечения и развития талантов.<br>
-Инженерное понимание технологий конвертирую в ценность для клиента и оформляю в стратегию развития бизнеса.</div>
-        </div>
-
-        <div style="margin-top:10px">
-          <span class="pill">Продуктовая стратегия</span>
-          <span class="pill">Каскадирование бизнес-целей</span>
-          <span class="pill">Продуктовый менеджмент</span>
-          <span class="pill">Установка KPI и OKR</span>
-          <span class="pill">Партнёрства · интеграторы</span>
-          <span class="pill">Лидерство · Карты компетенций · Развитие талантов</span>
-          <span class="pill">JTBD · Customer Success</span>
-          <span class="pill">AI/ML</span>
-          <span class="pill">Cloud</span>
-          <span class="pill">Дерево метрик · OMTM · NSM</span>
-          <span class="pill">Unit-экономика · Product-Market Fit</span>
-          <span class="pill">P&amp;L Ownership · Pricing &amp; Packaging · GTM strategy</span>
-          <span class="pill">FinOps · Cost Allocation · Tagging</span>
-          <span class="pill">CX · CJM · NPS/CSI</span>
-          <span class="pill">IaaS/PaaS · OpenStack · VMware · k8s</span>
-          <span class="pill">TOGAF · IT4IT · ITIL 4</span>
-          <span class="pill">SRE · SLA/OLA · Incident/Problem Management</span>
-          <span class="pill">DevOps · CI/CD · IaC</span>
-          <span class="pill">Capacity Planning · Forecasting</span>
-        </div>
-      </div>
-    </header>
-
-    <!-- 01 -->
-    <section class="section">
-      <div class="secnum">01</div>
-      <div class="container section-content">
-        <div class="caps">Принципы и инструменты</div>
-        <h2>Как я принимаю решения</h2>
-        <div class="grid grid-2">
-          <div>
-            <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:10px"><div style="margin-top:2px">🏆</div><p class="lead-sm"><b>Создание продуктов и управление портфелем</b><br>Поиск проблемы → поиск решения → масштаб.<br>Сначала Problem-Solution Fit, затем пилоты/MVP и Product-Market Fit;<br>Любая фича - через тестирование гипотез, метрику эффекта и план отката;<br>Фабрика экспериментов: поток гипотез через конвейер тестирования с низкой ценой ошибки. Быстро убиваем слабые, выбираем лучшие и масштабируем;<br>Каждому продукту - одна North Star и OMTM на квартал. Решения принимаются данными, а не статусом.</p></div>
-            <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:10px"><div style="margin-top:2px">🛠️</div><p class="lead-sm"><b>Масштабирование, поддержка и сервис</b><br>Продуктом считается весь опыт, а не только интерфейс. Сервис, поддержка, документация, обучение, Capacity Planning, управление инцидентами и проблемами - такие же части продукта, как новые фичи.<br>Всё, что затрагивает опыт клиента, должно анализироваться и улучшаться через единый бэклог с RICE-скорингом и привязкой к дереву метрик.<br>На техдолг, RCA и SRE в каждом релизном цикле должен выделяться отдельный бюджет.</p></div>
-            <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:10px"><div style="margin-top:2px">💹</div><p class="lead-sm"><b>Рынок, позиционирование, GTM</b><br>Сегментация рынка по JTBD. Позиционирование - через решение проблемы пользователя, а не функционал.<br>battle cards; единая коммуникация о продукте в продажах, пресейле, маркетинге и Customer Success.<br>ICP, мультиканальный GTM: digital, прямые продажи, партнёры, маркетплейсы. Пруф-пакеты: кейсы, ROI-калькуляторы, референсы.</p></div>
-          </div>
-          <div>
-            <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:10px"><div style="margin-top:2px">🧭</div><p class="lead-sm"><b>Команды, культура, ритм</b><br>Ясные принципы и регламенты, DoR/DoD, кодекс взаимодействия.<br>Ритуалы: WBR/MBR/QBR, актуализация дорожной карты, разбор инцидентов. Каждый ритуал имеет входы/выходы и владельца.<br>Прозрачные метрики: открытые дашборды и методы расчёта, регулярная оценка динамики.<br>Команды владеют P&amp;L своих продуктов и проблемным пространством вокруг него. Управление - через единые стандарты и «золотые пути», а не контроль деталей.</p></div>
-            <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:10px"><div style="margin-top:2px">👥</div><p class="lead-sm"><b>Люди: управление и рост</b><br>Эффективная команда начинается с эффективного найма: структурированные интервью, кейсы. Нанимать нужно медленно, увольнять быстро, но уважительно.<br>ФОТ - инструмент стратегии. Хедкаунт-модель связана с юнит-экономикой. Инвестиции идут туда, где наилучшая отдача.<br>Карты компетенций, гильдии, менторство. Прозрачные ожидания → объективная оценка → предсказуемое развитие: предсказуемо развивающийся специалист - лучший промоутер компании.<br>План преемственности и «ключевые люди × риски». Люди - главная ценность, но нельзя полагаться на то, что они останутся в компании навсегда.</p></div>
-            <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:10px"><div style="margin-top:2px">🤖</div><p class="lead-sm"><b>AI/ML как инструмент</b><br>Искусственный интеллект - инструмент с предсказуемыми сценариями применения и ограничениями: эффект от его применения необходимо оценивать заранее.</p></div>
-          </div>
-        </div>
-        <div class="callout-warn" style="margin-top:8px;margin-bottom:8px">
-          <div class="lead-sm" style="color:#e4e4e7">Успех клиента - это продуктовая стратегия, а ценность для клиента - ключевая продуктовая метрика</div>
+          <article class="case-file" id="case-private-cloud">
+            <aside><span>Кейс 03</span><span>2019–2020</span></aside>
+            <div class="case-body">
+              <h3>Частное облако: из заказного внедрения — в тиражируемый продукт</h3>
+              <p>После внедрения частного облака у крупного заказчика превратил проектные наработки в самостоятельный продукт: перестроил команду и процессы под регулярные релизы, формализовал требования и план развития, рассчитал юнит-экономику, подготовил полный комплект продуктовой документации и материалы для продаж.</p>
+              <p>Нашёл первых клиентов и сопровождал сделки до подписания. Технологический стек: OpenStack, ManageIQ, Ceph, OpenShift, Terraform и Ansible.</p>
+              <p class="result-line"><span>Результат</span> Первые три контракта — совокупной стоимостью более 1 млрд рублей.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- 02 -->
-    <section class="section">
-      <div class="secnum">02</div>
-      <div class="container section-content">
-        <div class="caps">Кейсы</div>
-        <h2>Выборочно - три показательных</h2>
-        <div class="grid grid-3">
-          <div class="card">
-            <div class="caps" style="margin-bottom:6px">Кейс A</div>
-            <div style="font-weight:700;font-size:18px;margin-bottom:8px">Импортозамещение,<br>16&nbsp;000 серверов</div>
-            <p class="lead-sm">Организовал работу команды из 103 специалистов и менеджеров из 4 компаний (два вендора, заказчик, мы - генподрядчик и единое окно документооборота и поддержки) для выполнения проекта по импортозамещению платформы виртуализации (VMware) в крупнейшем банке страны.<br>Сшил команды, процессы и системы: сквозные регламенты, матрицы эскалаций, автоматизированная маршрутизация обращений, бесшовная работа в рамках технической поддержки, ПСИ, внедрения.<br>Обеспечил выполнение требований договора с минимально возможными отклонениями от графика и нарушениями SLA.</p>
-          </div>
-          <div class="card">
-            <div class="caps" style="margin-bottom:6px">Кейс B</div>
-            <div style="font-weight:700;font-size:18px;margin-bottom:8px">Рост выручки, NPS, SLA</div>
-            <p class="lead-sm">За 3 года управления продуктовым направлением:<br>Повысил доступность сервисов до 99.985% за счёт внедрения кросс-функциональных процессов у команд разработки, SRE, L2 и L1, системного управления инцидентами, проблемами и рисками.<br>Нарастил NPS направления на 48 п. п. с помощью комплексного управления опытом клиента и омниканальной коммуникации.<br>Увеличил ARR продуктового направления (IaaS/PaaS) в 20 раз за счёт чёткой сегментации рынка, позиционирования продуктов через проблему клиента и непрерывного улучшения клиентского опыта.</p>
-          </div>
-          <div class="card">
-            <div class="caps" style="margin-bottom:6px">Кейс C</div>
-            <div style="font-weight:700;font-size:18px;margin-bottom:8px">Частное облако как продукт</div>
-            <p class="lead-sm">После завершения проекта внедрения частного облака у крупного заказчика собрал из артефактов проекта полноценный продукт: пересобрал команду и процессы под релизную модель разработки, сформировал Sales Kit, полный комплект продуктовой документации и маркетинговых материалов.<br>Рассчитал Unit-экономику и довёл продукт до первых сделок: три сделки общим объёмом более миллиарда рублей.</p>
-            <div class="callout" style="margin-top:10px">
-              <div class="caps" style="opacity:.8;margin-bottom:6px">Технологический стек</div>
-              <div class="lead-sm">OpenStack, ManageIQ, Ceph, OpenShift, Terraform, Ansible</div>
-            </div>
-          </div>
+    <section id="operating-system" class="section shell">
+      <header class="section-intro">
+        <p class="section-kicker">03 / Система работы</p>
+        <div>
+          <h2>Зоны максимального влияния</h2>
+          <p>Я глубоко понимаю технологии и полный жизненный цикл продукта — от разработки до мониторинга и эксплуатации. Усиливаю этот инженерный фундамент продуктовым мышлением, стратегическим видением, знанием рынка и умением строить команды, чтобы портфель продуктов работал как единая система.</p>
         </div>
+      </header>
+
+      <div class="practice-list">
+        <article class="practice-row" id="ai-capability">
+          <p class="row-no">01</p><h3>AI Adoption</h3>
+          <p>Понимаю инженерную и бизнес-сторону AI: возможности и ограничения моделей и агентов, требования к данным и процессам, экономику внедрения. Формирую жизнеспособные сценарии применения, содержательно работаю с техническими специалистами и принимаю обоснованные управленческие решения. Собственную экспертизу постоянно углубляю через преподавание.</p>
+        </article>
+        <article class="practice-row" id="strategy-and-portfolio">
+          <p class="row-no">02</p><h3>Стратегия и портфель</h3>
+          <p>Формирую продуктовую стратегию и логику P&amp;L на уровне портфеля. Сегодня моя команда определяет стратегию выхода на рынок и продвижения всех инфраструктурных продуктов и продуктов информационной безопасности Cloud.ru. Связываю сегментацию, позиционирование, экономику, цены, приоритеты портфеля и цели команд.</p>
+        </article>
+        <article class="practice-row" id="customer-experience">
+          <p class="row-no">03</p><h3>Клиентский опыт</h3>
+          <div>
+            <p>Создавая и масштабируя крупные облачные продукты, строил продуктовые и операционные процессы вокруг клиентского опыта: от исследования до постоянной обратной связи, Customer Success и показателей эксплуатации. Результат — рост NPS направления на 48 процентных пунктов и устойчивые сервисы для более чем 300 корпоративных клиентов.</p>
+            <p id="customer-journey" class="nested-proof"><span>CJM</span> Клиентский путь для меня — не схема на стене, а способ связать ожидания клиента, обещание продукта, продажи, внедрение, поддержку и измеримый результат.</p>
+          </div>
+        </article>
+        <article class="practice-row" id="go-to-market">
+          <p class="row-no">04</p><h3>Вывод на рынок и B2B-рост</h3>
+          <p>Прошёл всю коммерческую цепочку: инженерия, техническая поддержка продаж, развитие бизнеса, управление продуктом и продуктовый маркетинг. Умею перевести сложную технологию в понятную ценность для покупателя, собрать предложение и материалы для продаж, довести первые сделки до подписания и превратить успешные сценарии в повторяемый рост.</p>
+        </article>
+        <article class="practice-row" id="complex-systems">
+          <p class="row-no">05</p><h3>Сложные системы</h3>
+          <p>Понимаю, как проектируются, разрабатываются, контролируются и эксплуатируются сложные технологические системы. Использую это понимание, чтобы соединять архитектуру, процессы реализации, сервисную модель и экономический результат; тот же системный подход применяю в работе с командами и в преподавании.</p>
+        </article>
+        <article class="practice-row" id="teams-culture">
+          <p class="row-no">06</p><h3>Команды и культура</h3>
+          <p>Строю организации, в которых понятны ответственность и критерии результата, решения опираются на данные, а будущие лидеры получают пространство для роста. Использую продуманную структуру, качественный найм, карты компетенций, регулярные встречи один на один, прямую обратную связь и систему преемственности. Управлял направлением 56 FTE и восемью прямыми подчинёнными; eNPS команды достигал 94%.</p>
+        </article>
       </div>
     </section>
 
-    <!-- 03 -->
-    <section class="section">
-      <div class="secnum">03</div>
-      <div class="container section-content">
-        <div class="caps">Профессиональный опыт</div>
-        <h2>Карьерный путь и задачи</h2>
+    <section id="experience" class="section section-muted">
+      <div class="shell">
+        <header class="section-intro">
+          <p class="section-kicker"><span class="screen-label">04 / Опыт</span><span class="print-label">03 / Опыт</span></p>
+          <div>
+            <h2>От кода и инфраструктуры — к рынку и стратегии</h2>
+            <p>Более 10 лет в ИТ и семь лет в продуктах. Начинал с разработки и обслуживания корпоративных серверов, систем хранения данных и суперкомпьютеров; сегодня определяю, как будет развиваться и выходить на рынок портфель облачной платформы федерального масштаба. Этот путь позволяет мне одинаково уверенно говорить с инженерами, клиентами, коммерческими командами и руководителями бизнеса.</p>
+          </div>
+        </header>
 
-        <div class="jobs">
-          <article class="job">
-            <div class="date">2024 - по настоящее время</div>
-            <div>
-              <h3>Product Marketing &amp; GTM Lead</h3>
-              <p class="company muted">Cloud.ru (ООО «Облачные технологии»)</p>
-              <ul class="lead-sm">
-                <li>Формирование и реализация стратегии вывода на рынок и продвижения всех продуктов IaaS и SECaaS</li>
-                <li>Внедрение процесса поиска, анализа и описания пользовательских сценариев. Масштабирование продаж за счёт продвижения успешных сценариев через кейсы/референсы</li>
-                <li>Координация работы команд разработки продуктов, маркетинга, продаж и технической поддержки продаж: чёткий бизнес-ритм, единые фреймворки и переиспользуемые шаблоны</li>
+        <div class="timeline">
+          <article class="role" id="role-gtm">
+            <div class="role-date">2024 — сейчас</div>
+            <div class="role-content">
+              <h3 lang="en">Product Marketing &amp; GTM Lead</h3>
+              <p class="role-subtitle">Руководитель продуктового маркетинга и вывода на рынок · Cloud.ru</p>
+              <ul>
+                <li>Моя команда формирует и реализует стратегию выхода на рынок и продвижения всего портфеля инфраструктурных продуктов и продуктов информационной безопасности Cloud.ru.</li>
+                <li>Внедрил процесс поиска, анализа и описания пользовательских сценариев; успешные сценарии превращаем в кейсы и рекомендации для масштабирования продаж.</li>
+                <li>Объединил продуктовые команды, маркетинг, продажи и техническую поддержку продаж общим ритмом работы и повторно используемыми материалами.</li>
               </ul>
             </div>
           </article>
-
-          <article class="job">
-            <div class="date">2023 - 2024</div>
-            <div>
-              <h3>Delivery Director</h3>
-              <p class="company muted">Cloud.ru (ООО «Облачные технологии»)</p>
-              <ul class="lead-sm">
-                <li>Обеспечение реализации проекта по импортозамещению платформы виртуализации: SLA/OLA, риск-менеджмент, QBR/EBR, верификация послепоставочной ценности</li>
-                <li>Координация работы команды из 4 компаний в едином бизнес-ритме, выстраивание и автоматизация сквозных процессов приёма-передачи релизов, ПНР, ПСИ, миграции, эксплуатации, поддержки</li>
-                <li>Выстраивание проактивной договорной работы (юридической и финансовой) для своевременной реализации стратегических договорённостей</li>
+          <article class="role" id="role-delivery">
+            <div class="role-date">2023 — 2024</div>
+            <div class="role-content">
+              <h3 lang="en">Delivery Director</h3>
+              <p class="role-subtitle">Директор программы реализации · Cloud.ru</p>
+              <ul>
+                <li>Руководил программой миграции платформы виртуализации в контуре 16 000 серверов; координировал 103 специалиста из четырёх компаний.</li>
+                <li>Выстроил и автоматизировал сквозные процессы приёмки релизов, пусконаладочных работ, приёмочных испытаний, миграции, эксплуатации и поддержки; управлял SLA/OLA, рисками и встречами с заказчиком.</li>
+                <li>Связал технический план с договорной, юридической и финансовой работой, чтобы стратегические договорённости вовремя превращались в результат.</li>
               </ul>
             </div>
           </article>
-
-          <article class="job">
-            <div class="date">2021 - 2023</div>
-            <div>
-              <h3>Run Lead</h3>
-              <p class="company muted">Cloud.ru (ООО «Облачные технологии»)</p>
-              <ul class="lead-sm">
-                <li>Формирование и реализация стратегии продуктового направления: баланс роста выручки и маржи, управление P&amp;L</li>
-                <li>Обеспечение единых процессов Incident, Problem и Capacity Management, выстраивание кросс-функциональных процессов</li>
-                <li>Система управления продуктовыми командами: OKR прозрачно связаны со стратегией, чёткий бизнес-ритм, развитие команды через развитие талантов и преемственность, формирование продуктовой культуры</li>
+          <article class="role" id="role-run">
+            <div class="role-date">2021 — 2023</div>
+            <div class="role-content">
+              <h3 lang="en">Run Lead</h3>
+              <p class="role-subtitle">Руководитель продуктового направления · Cloud.ru</p>
+              <ul>
+                <li>Формировал и реализовывал стратегию портфеля IaaS, PaaS и AI-сервисов; отвечал за баланс роста, маржи и P&amp;L продуктового направления.</li>
+                <li>Управлял организацией 56 FTE и восемью прямыми подчинёнными; связал OKR со стратегией, выстроил общий ритм управления, развитие талантов и систему преемственности.</li>
+                <li>Объединил разработку, SRE и две линии поддержки едиными процессами управления инцидентами, проблемами и мощностями.</li>
+                <li><strong>Результаты цикла Product Manager → Run Lead:</strong> ARR ×20, NPS +48 п.п., SLA 99,985%, вывод изменений на рынок ×6.</li>
               </ul>
             </div>
           </article>
-
-          <article class="job">
-            <div class="date">2020 - 2021</div>
-            <div>
-              <h3>Product Manager</h3>
-              <p class="company muted">SberCloud (ООО «Облачные технологии»)</p>
-              <ul class="lead-sm">
-                <li>Масштабирование облачных продуктов → наращивание доли рынка и маржинальности, повышение стабильности, регулярный сбор обратной связи от клиентов</li>
-                <li>Вывод на рынок новых продуктов по полному продуктовому циклу, через исследование, гипотезы, анализ конкурентов и эксперименты с единым циклом фидбэка</li>
-                <li>Формирование и развитие продуктовой команды: тимбилдинги, регулярные 1-на-1 с конструктивной ОС в обе стороны, диалоги о развитии, карты компетенций; eNPS 94% в команде - один из лучших в компании</li>
+          <article class="role" id="role-product">
+            <div class="role-date">2020 — 2021</div>
+            <div class="role-content">
+              <h3 lang="en">Product Manager</h3>
+              <p class="role-subtitle">Руководитель продукта · SberCloud</p>
+              <ul>
+                <li>Масштабировал облачные продукты с фокусом на долю рынка, маржинальность, надёжность и клиентский опыт.</li>
+                <li>Выводил продукты по полному циклу: исследование потребностей, проверка гипотез, анализ конкурентов, эксперименты, запуск и постоянная работа с обратной связью.</li>
+                <li>Развивал команду через встречи один на один, двустороннюю обратную связь и карты компетенций; eNPS команды достиг 94%.</li>
               </ul>
             </div>
           </article>
-
-          <article class="job">
-            <div class="date">2019 - 2020</div>
-            <div>
-              <h3>Product Manager</h3>
-              <p class="company muted">КРОК Инкорпорейтед</p>
-              <ul class="lead-sm">
-                <li>Запуск продукта «Частное облако» для enterprise-клиентов: анализ потребности клиентов, сбор и формализация требований, формирование бэклога, расчёт unit-экономики</li>
-                <li>Наполнение Sales Kit и полного комплекта продуктовой документации, создание маркетинговых материалов и материалов для поддержки продаж</li>
-                <li>Поиск и привлечение первых клиентов, сопровождение первых сделок до подписания</li>
+          <article class="role" id="role-krok">
+            <div class="role-date">2016 — 2020</div>
+            <div class="role-content">
+              <h3 lang="en">Product · Business Development · Pre-Sales · Engineering</h3>
+              <p class="role-subtitle">Четыре последовательные роли · КРОК Инкорпорейтед</p>
+              <ul>
+                <li><strong>Руководитель продукта:</strong> создал продукт «Частное облако» — от исследования потребностей, требований, плана развития и юнит-экономики до первых трёх контрактов совокупной стоимостью более 1 млрд рублей.</li>
+                <li><strong>Менеджер по развитию бизнеса:</strong> привлекал клиентов, развивал ключевых заказчиков, управлял сделками и Customer Success; формировал комплексные предложения и конкурентные материалы.</li>
+                <li><strong>Менеджер технической поддержки продаж:</strong> проектировал комплексные ИТ-решения и автоматизировал технико-экономические расчёты, включая TCO.</li>
+                <li><strong>Инженер:</strong> обслуживал высоконагруженные серверы, системы хранения данных и суперкомпьютеры; диагностировал сложные программно-аппаратные инциденты.</li>
               </ul>
             </div>
           </article>
-
-          <article class="job">
-            <div class="date">2018 - 2019</div>
-            <div>
-              <h3>Менеджер по развитию бизнеса</h3>
-              <p class="company muted">КРОК Инкорпорейтед</p>
-              <ul class="lead-sm">
-                <li>Поиск и привлечение новых клиентов, формирование новых комплексных предложений</li>
-                <li>Customer Success и развитие ключевых клиентов, управление сделками</li>
-                <li>Анализ рынка и конкурентов, формирование battle cards и УТП</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="job">
-            <div class="date">2017 - 2018</div>
-            <div>
-              <h3>Pre-Sale Manager</h3>
-              <p class="company muted">КРОК Инкорпорейтед</p>
-              <ul class="lead-sm">
-                <li>Проектирование комплексных ИТ-решений под требования заказчика</li>
-                <li>Автоматизация типовых расчётов, включая TCO</li>
-                <li>Глубокий анализ требований заказчика и формирование лучшего решения под задачу</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="job">
-            <div class="date">2016 - 2017</div>
-            <div>
-              <h3>Инженер</h3>
-              <p class="company muted">КРОК Инкорпорейтед</p>
-              <ul class="lead-sm">
-                <li>Обслуживание высоконагруженных систем (enterprise-серверы, СХД, суперкомпьютеры)</li>
-                <li>Решение уникальных инцидентов, глубокая диагностика hardware/software-инцидентов, внедрение лучших практик сервисного обслуживания и документирования</li>
-                <li>Постоянное повышение квалификации и освоение новых технологий (T-shaped-компетенции)</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="job">
-            <div class="date">2015 - 2016</div>
-            <div>
+          <article class="role" id="role-engineer">
+            <div class="role-date">2015 — 2016</div>
+            <div class="role-content">
               <h3>Инженер-разработчик</h3>
-              <p class="company muted">АО «Концерн ВКО Алмаз-Антей»</p>
-              <ul class="lead-sm">
-                <li>Проектирование и разработка ПО для критичных систем</li>
-                <li>Code review, unit-тесты, Agile-практики</li>
-                <li>Создание нормативно-технической документации по ГОСТ</li>
-              </ul>
+              <p class="role-subtitle">АО «Концерн ВКО „Алмаз-Антей“»</p>
+              <ul><li>Проектировал и разрабатывал программное обеспечение для критичных систем; проводил проверку кода, создавал модульные тесты и нормативно-техническую документацию по ГОСТ.</li></ul>
             </div>
           </article>
         </div>
-
-        <div class="callout" style="margin-top:6px">
-          <div class="lead-sm" style="color:#e4e4e7">Пройдя от кода и железа - к рынку и стратегии, я научился превращать технологии в измеримую ценность</div>
-        </div>
       </div>
     </section>
 
-    <!-- 04 -->
-    <section class="section">
-      <div class="secnum">04</div>
-      <div class="container section-content">
-        <div class="caps">Экспертиза и наставничество</div>
-        <h2>Образование и преподавание</h2>
-        <div class="grid grid-2">
-          <div class="card">
-            <div class="caps" style="margin-bottom:8px">Образование</div>
-            <ul class="lead-sm" style="list-style:disc">
-              <li><b>Product Executive (CPO)</b><br>НИУ «ВШЭ» - 2023</li>
-              <li><b>Информатика и вычислительная техника</b><br>НИУ «МЭИ» - 2016</li>
-              <li><b>Дополнительные программы и курсы:</b><br>Бизнес-школа для менеджеров - 2022<br>Фасилитация для руководителей - 2022<br>Управление комплаенс-рисками - 2024<br>Привлечение лучших кандидатов - 2024<br>ИИ в рабочих процессах: модели и агенты - 2025</li>
-            </ul>
-          </div>
-          <div class="card">
-            <div class="caps" style="margin-bottom:8px">Преподавание и наставничество</div>
-            <ul class="lead-sm" style="list-style:disc">
-              <li><b>СберУниверситет</b> - авторские курсы по облачным технологиям и AI для нетехнических руководителей</li>
-              <li><b>РАНХиГС</b> - авторская лекция про облачные технологии</li>
-              <li><b>Центральный Университет</b> - трекер дипломных проектов, наставник</li>
-              <li><b>Внутренние программы Cloud.ru</b> - авторские программы обучения продаж, пресейла и продуктов, обучающие курсы и вебинары для клиентов, менторство</li>
-            </ul>
-          </div>
+    <section id="learning" class="section shell">
+      <header class="section-intro">
+        <p class="section-kicker"><span class="screen-label">05 / Передача опыта</span><span class="print-label">04 / Передача опыта</span></p>
+        <div>
+          <h2>Учусь, объясняя сложное.<br>Развиваюсь, выращивая лидеров.</h2>
+          <p>Преподавание и передача опыта — часть моей системы работы. Готовясь к занятиям и сопровождая чужие проекты, я углубляю собственные знания, превращаю их в ясные модели и помогаю другим принимать более сильные решения.</p>
         </div>
+      </header>
+
+      <div class="learning-grid">
+        <section id="education" aria-labelledby="education-title">
+          <h3 id="education-title">Образование</h3>
+          <div class="learning-entry"><h4>Product Executive (CPO)</h4><p>Программа для руководителей продукта · Высшая школа бизнеса НИУ ВШЭ · 2023</p></div>
+          <div class="learning-entry"><h4>Вычислительные машины, комплексы, системы и сети</h4><p>Институт автоматики и вычислительной техники НИУ МЭИ · 2016</p></div>
+          <div class="learning-entry"><h4>Дополнительное обучение</h4><p>«ИИ в рабочих процессах: модели и агенты» · 2025</p><p>Управление комплаенс-рисками и привлечение лучших кандидатов · 2024</p><p>Фасилитация для руководителей и бизнес-школа для менеджеров · 2022</p></div>
+        </section>
+
+        <section id="teaching" aria-labelledby="teaching-title">
+          <h3 id="teaching-title">Преподавание и научное руководство</h3>
+          <div class="learning-entry"><h4>СберУниверситет</h4><p>Авторская программа по облачным технологиям и AI для нетехнических руководителей компаний и лидеров цифровой трансформации.</p></div>
+          <div class="learning-entry"><h4>Авторские занятия по AI</h4><p>Лекция «Юнит-экономика AI-инициатив», практический семинар по AI-агентам и отдельный семинар по саморазворачивающимся агентам.</p></div>
+          <div class="learning-entry"><h4>РАНХиГС · Giga Academy</h4><p>Авторская лекция «Облако как инструмент эффективного управления организацией»; модуль «Облачная инфраструктура».</p></div>
+          <div class="learning-entry"><h4>Центральный университет</h4><p>Научный руководитель магистерских дипломных проектов по продуктовому управлению и машинному обучению, включая AI-проекты.</p></div>
+          <div class="learning-entry"><h4>Cloud.ru</h4><p>Авторские программы для продаж, технической поддержки продаж и продуктовых команд; курсы и вебинары для клиентов; наставничество.</p></div>
+        </section>
       </div>
-    </section>
 
-    <!-- 05 -->
-    <section class="section">
-      <div class="secnum">05</div>
-      <div class="container section-content">
-        <div class="caps">Супер-способности</div>
-        <h2>Зоны максимального влияния</h2>
-        <div class="grid grid-3">
-          <div class="card">
-            <div class="caps" style="margin-bottom:8px">Стратегия и продуктовый портфель</div>
-            <ul class="lead-sm" style="list-style:disc">
-              <li>Формирование единой продуктовой стратегии, внедрение продуктового процесса: от гипотезы до PMF, построение дерева метрик и внедрение принципа принятия решений на основе данных</li>
-              <li>Построение разработки и поддержки продуктов через ценность для клиента</li>
-            </ul>
-          </div>
-          <div class="card">
-            <div class="caps" style="margin-bottom:8px">Операционная устойчивость</div>
-            <ul class="lead-sm" style="list-style:disc">
-              <li>ITSM на уровне портфеля: доступность, MTTR, предиктивный Capacity Management</li>
-              <li>Эксплуатация и поддержка - как часть продуктового процесса</li>
-              <li>Снижение TCO клиентов без ущерба качеству сервиса</li>
-            </ul>
-          </div>
-          <div class="card">
-            <div class="caps" style="margin-bottom:8px">Команда и культура</div>
-            <ul class="lead-sm" style="list-style:disc">
-              <li>Формирование живой продуктовой культуры</li>
-              <li>Привлечение и развитие сильных лидеров, система преемственности</li>
-              <li>Открытые данные и прозрачный ритм: OKR, дашборды, единый фидбэк-контур</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="callout" style="margin-top:12px">
-          <div class="lead-sm" style="color:#e4e4e7">Регулярно расту и развиваюсь, развивая вместе с командой: людей, процессы, продукты, бизнес</div>
-        </div>
-
-        <footer class="footer">
-          <div class="grid grid-2" style="align-items:center">
-            <div>
-              <div style="font-weight:700;font-size:18px">Готов обсудить роль Директора по продукту / CPO</div>
-              <div class="muted lead-sm">Формат: очно/гибрид/remote</div>
-            </div>
-            <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-start">
-              <a class="btn" href="tel:+79166723602">📞 Позвонить</a>
-              <a class="btn" href="mailto:rpoo@bk.ru">✉️ Написать</a>
-              <a class="btn" href="https://t.me/PutilovR">✈️ Telegram</a>
-            </div>
-          </div>
-        </footer>
-      </div>
+      <section class="print-capabilities" aria-labelledby="print-capabilities-title">
+        <h3 id="print-capabilities-title">Ключевые компетенции</h3>
+        <ul>
+          <li><strong>AI Adoption</strong><span>Бизнес-гипотеза, экономика, влияние на P&amp;L и критерии масштабирования.</span></li>
+          <li><strong>Облачный и AI-портфель</strong><span>Стратегия IaaS, PaaS и AI-сервисов; баланс роста, маржи и приоритетов.</span></li>
+          <li><strong>Клиентский опыт</strong><span>Исследования, CJM, Customer Success, обратная связь и NPS +48 п.п.</span></li>
+          <li><strong>B2B GTM</strong><span>Сегментация, позиционирование, материалы для продаж и масштабирование сценариев.</span></li>
+          <li><strong>Сложные системы</strong><span>Архитектура, реализация, эксплуатация, SLA и управление межфункциональными программами.</span></li>
+          <li><strong>Команды</strong><span>56 FTE, найм, карты компетенций, развитие лидеров, преемственность и eNPS 94%.</span></li>
+        </ul>
+      </section>
     </section>
   </main>
+
+  <footer id="contacts" class="site-footer">
+    <div class="shell footer-grid">
+      <p class="footer-statement">Технологии должны давать<br>измеримую ценность.</p>
+      <address>
+        <a href="tel:+79166723602">+7 916 672-36-02</a>
+        <a href="mailto:rpoo@bk.ru">rpoo@bk.ru</a>
+        <a href="https://t.me/PutilovR" rel="me">Telegram · @PutilovR</a>
+      </address>
+      <a class="back-to-top" href="#top">В начало <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
 </body>
 </html>
